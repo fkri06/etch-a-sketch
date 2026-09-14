@@ -7,3 +7,9 @@ for (let i = 0; i < 16 * 16; i++) {
     container.appendChild(childContainer);
 }
 
+const childContainers = document.querySelectorAll(".child-container");
+childContainers.forEach(child => {
+    child.addEventListener("mouseenter", () => {
+        child.style.backgroundColor = "red";
+    });
+});
