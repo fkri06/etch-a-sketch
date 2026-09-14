@@ -18,11 +18,16 @@ function removeGrid() {
     }
 }
 
+function getColor(){
+    const colors = ["red", "green", "blue", "yellow", "pink", "cyan"];
+    return colors[Math.floor(Math.random() * colors.length)];
+}
+
 function hover() {
     const childContainers = document.querySelectorAll(".child-container");
     childContainers.forEach(child => {
         child.addEventListener("mouseenter", () => {
-            child.style.backgroundColor = "red";
+            child.style.backgroundColor = `${getColor()}`;
         });
     });
 }
